@@ -55,7 +55,7 @@ Want to query this graph to get all of the signalers or lockers? To get around t
     time
   }
 }
-
+```
 
 ###Unique Takeaways
 
