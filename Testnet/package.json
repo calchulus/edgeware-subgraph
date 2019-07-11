@@ -1,0 +1,16 @@
+{
+  "name": "EdgewareLockdropTwo",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ calchulus/EdgewareLockdropTwo",
+    "create-local": "graph create --node http://localhost:8020/ calchulus/EdgewareLockdropTwo",
+    "remove-local": "graph remove --node http://localhost:8020/ calchulus/EdgewareLockdropTwo",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 calchulus/EdgewareLockdropTwo"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.13.3",
+    "@graphprotocol/graph-ts": "0.13.0"
+  }
+}
