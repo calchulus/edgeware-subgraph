@@ -28,6 +28,49 @@ $(document).ready(function(){
     });
 });
 </script>
+
+<h3>Some Sample Queries</h3>
+
+<p>The following query can be used to find the largest lockers in the Lockdrop. Note, this cannot be done for signaled, as signaleds have different parameters. More on them later. </p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:60%;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+	{ lockeds(orderDirection: desc, orderBy: eth) {
+    id
+    owner
+    eth
+    lockAddr
+  }
+}
+
+</pre></div>
+
+<p>Signalers have no incentive in the lock drop to signal early, but those who do early are very sold on wanting to participate, so time is very relevant. Thus, a nice query could be something like:</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:60%;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+	{
+ signaleds(first: 100) {
+    id
+    contractAddr
+    edgewareAddr
+    time
+  }
+}
+
+</pre></div>
+
+<p>Want to query this graph to get all of the signalers or lockers? To get around the limitations of only the top 100 for the Lockers or the first 100 signalers, just add the skip parameter prior to querying the “first” or the ordered lockers. </p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:60%;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">
+{
+ signaleds(skip:100, first:100) {
+    id
+    contractAddr
+    edgewareAddr
+    time
+  }
+}
+
+
+</pre></div>
+
 <!-- 
 <script>
 function myFunction() {
