@@ -1,0 +1,17 @@
+type Locked @entity {
+  id: ID!
+  owner: Bytes! # address
+  eth: BigInt! # uint256
+  lockAddr: Bytes! # address
+  term: Int! # uint8
+  edgewareAddr: Bytes! # bytes
+  isValidator: Boolean! # bool
+  time: BigInt! # uint256
+}
+
+type Signaled @entity {
+  id: ID!
+  contractAddr: Bytes! # address
+  edgewareAddr: Bytes! # bytes
+  time: BigInt! # uint256
+}
