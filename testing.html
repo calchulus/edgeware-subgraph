@@ -1,0 +1,48 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+	<div id="button-1">
+    Desired Lockdrop address:
+    <form>
+    <select class="contract">
+    	<option value="edgeware-lockdrop">Lockdrop</option>
+    <option value="edgewarelockdroptwo">Lockdrop 2</option>
+    	<option value="testnet-edgeware">Testnet</option>
+    	</select>
+    </form>
+<p>Copy this endpoint below for HTTP Requests </p>
+    <div id="result" class="result">
+    </div>
+<!--  <button onclick="myFunction()">Copy Request URL</button> -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("select.contract").change(function(){
+        var selectedContract = $(this).children("option:selected").val();
+        var subgraph = "https://api.thegraph.com/subgraphs/name/calchulus/" + selectedContract;
+        $('div.result').text(subgraph);
+
+        alert("you may query \n https://api.thegraph.com/subgraphs/name/calchulus/" + selectedContract);
+
+ 
+    });
+});
+</script>
+<!-- 
+<script>
+function myFunction() {
+	    var copyText = document.getElementById("result").textContent.select();
+	    console.log(copyText);
+          copyText.select();
+  			document.execCommand("copy");
+  		}
+</script> -->
+
+
+
+
+    <!-- <button v-on:click="submitButton">submit</button> -->
+</body>
+
+
+</html>
