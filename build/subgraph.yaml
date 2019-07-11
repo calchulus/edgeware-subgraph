@@ -1,0 +1,26 @@
+specVersion: 0.0.1
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Contract
+    network: mainnet
+    source:
+      address: "0x1b75b90e60070d37cfa9d87affd124bb345bf70a"
+      abi: Contract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Locked
+        - Signaled
+      abis:
+        - name: Contract
+          file: Contract/abis/Contract.json
+      eventHandlers:
+        - event: Locked(indexed address,uint256,address,uint8,bytes,bool,uint256)
+          handler: handleLocked
+        - event: Signaled(indexed address,bytes,uint256)
+          handler: handleSignaled
+      file: Contract/Contract.wasm
