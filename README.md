@@ -1,6 +1,8 @@
 # Edgeware-subgraph
 [Edgeware](https://edgewa.re/) is a parachain built on Polkadot that is conducting a lock drop using Ethereum. This [Subgraph](https://thegraph.com/explorer/subgraph/calchulus/edgeware-lockdrop) takes in the first contract of the Lockdrop for the protocol. See [here](https://thegraph.com/explorer/subgraph/calchulus/edgewarelockdroptwo) for the latest second contract (locks are still currently occurring), and another testnet contract [here](https://thegraph.com/explorer/subgraph/calchulus/testnet-edgeware) 
 
+For ABIs and other downloads related to the other two contracts (EdgewareLockdrop2 & Testnet), please click into their respective folders in this repo. 
+
 ## Networks and Performance
 
 This subgraph can be found on The Graph Hosted Service at https://thegraph.com/explorer/subgraph/calchulus/edgeware-lockdrop
